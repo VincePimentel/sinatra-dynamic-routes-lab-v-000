@@ -24,7 +24,6 @@ class App < Sinatra::Base
     params.each do |key, value|
       binding.pry
     end
-    
   end
 
 end
