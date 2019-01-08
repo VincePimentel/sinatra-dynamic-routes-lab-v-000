@@ -21,10 +21,11 @@ class App < Sinatra::Base
   end
 
   get "/say/:word1/:word2/:word3/:word4/:word5" do
+    words = Array.new
     params.each do |key, value|
       eval "@#{key} = value"
+      words << "@#{key}"
     end
-    binding.pry
   end
 
 end
