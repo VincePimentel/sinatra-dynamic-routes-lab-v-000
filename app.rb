@@ -21,13 +21,13 @@ class App < Sinatra::Base
   end
 
   get "/say/:word1/:word2/:word3/:word4/:word5" do
-    @words = Array.new
+    words = Array.new
 
     params.each do |key, value|
-      @words << value
+      words << value
     end
 
-    "#{@words.join(" ")}."
+    "#{words.join(" ")}."
   end
 
   get "/:operation/:number1/:number2" do
