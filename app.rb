@@ -24,6 +24,7 @@ class App < Sinatra::Base
     params.each do |key, value|
       eval "@#{key} = value"
     end
+    binding.pry
   end
 
 end
