@@ -25,6 +25,8 @@ class App < Sinatra::Base
     params.each do |key, value|
       words << value
     end
+
+    "#{words.join(" ")}."
   end
 
 end
